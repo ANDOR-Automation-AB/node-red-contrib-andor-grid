@@ -1,6 +1,6 @@
 {
   "name": "@andor-automation/node-red-contrib-andor-grid",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Node-RED node for grid operations (Andor Grid)",
   "main": "andor-grid/andor-grid.js",
   "keywords": [
@@ -10,9 +10,7 @@
   ],
   "author": "ANDOR Automation AB",
   "license": "MIT",
-  "dependencies": {
-    
-  },
+  "dependencies": {},
   "node-red": {
     "nodes": {
       "andor-grid": "andor-grid/andor-grid.js"
