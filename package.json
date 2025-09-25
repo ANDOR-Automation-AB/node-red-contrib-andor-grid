@@ -1,6 +1,6 @@
 {
   "name": "@andor-automation/node-red-contrib-andor-grid",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A Node-RED node for grid operations (Andor Grid)",
   "main": "andor-grid/andor-grid.js",
   "keywords": [
