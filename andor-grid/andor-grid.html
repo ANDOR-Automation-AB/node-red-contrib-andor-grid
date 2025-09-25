@@ -1,0 +1,31 @@
+<script type="text/javascript">
+    RED.nodes.registerType('andor-grid', {
+        category: 'ANDOR',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:"grid"},
+            gridSize: {value: 10, required: true}
+        },
+        inputs: 1,
+        outputs: 1,
+        // icon: "grid.png",
+        label: function() {
+            return this.name || "grid";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="andor-grid">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Namn</label>
+        <input type="text" id="node-input-name" placeholder="Namn">
+    </div>
+    <div class="form-row">
+        <label for="node-input-gridSize"><i class="fa fa-th"></i> Gridstorlek</label>
+        <input type="number" id="node-input-gridSize" value="10">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="andor-grid">
+    <p>Noden andor-grid tar emot ett meddelande och lägger till en grid-egenskap baserat på konfiguration.</p>
+</script>
