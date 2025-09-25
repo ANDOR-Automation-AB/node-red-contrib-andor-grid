@@ -1,6 +1,6 @@
 <script type="text/javascript">
     RED.nodes.registerType('andor-grid', {
-        category: 'ANDOR',
+        category: 'andor',
         color: '#a6bbcf',
         defaults: {
             name: {value:"grid"},
@@ -8,7 +8,7 @@
         },
         inputs: 1,
         outputs: 1,
-        // icon: "grid.png",
+        icon: "font-awesome/fa-th",
         label: function() {
             return this.name || "grid";
         }
@@ -27,5 +27,5 @@
 </script>
 
 <script type="text/html" data-help-name="andor-grid">
-    <p>Noden andor-grid tar emot ett meddelande och lägger till en grid-egenskap baserat på konfiguration.</p>
+    <p>This node sends data to the andor grid widget in Dashboard 2.</p>
 </script>

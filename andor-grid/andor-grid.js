@@ -3,13 +3,11 @@ module.exports = function(RED) {
         RED.nodes.createNode(this, config);
         var node = this;
 
-        // Till exempel: en property som kan konfigureras via HTML-formuläret
         node.gridSize = config.gridSize;
 
         node.on('input', function(msg, send, done) {
             try {
-                // här skriver du din logik
-                // Exempel: lägg till property som demonstration
+                msg.topic = msg.topic || "andor-grid";
                 msg.andor = {
                     gridSize: node.gridSize,
                     original: msg.payload
@@ -17,7 +15,7 @@ module.exports = function(RED) {
                 send(msg);
                 if (done) done();
             } catch (err) {
-                node.error("Fel i andor-grid: " + err, msg);
+                node.error("error in andor-grid: " + err, msg);
                 if (done) done(err);
             }
         });

@@ -5,6 +5,9 @@
   "main": "andor-grid/andor-grid.js",
   "keywords": [
     "node-red",
+    "dashboard 2",
+    "widget",
+    "contrib",
     "grid",
     "andor"
   ],
@@ -14,6 +17,11 @@
   "node-red": {
     "nodes": {
       "andor-grid": "andor-grid/andor-grid.js"
+    }
+  },
+  "node-red-dashboard": {
+    "widgets": {
+      "andor-grid": "ui/andor-grid.js"
     }
   }
 }
