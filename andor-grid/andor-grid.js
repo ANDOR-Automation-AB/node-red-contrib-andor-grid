@@ -3,20 +3,22 @@ module.exports = function(RED) {
         RED.nodes.createNode(this, config);
         var node = this;
 
-        node.gridSize = config.gridSize;
+        const group = RED.nodes.getNode(config.group);
+        if (!group) {
+            node.status({fill:"red", shape:"ring", text:"no group"});
+            return;
+        }
+
+        const evts = {};
+        
+        group.register(node, config, evts);
 
         node.on('input', function(msg, send, done) {
             try {
-                msg.topic = msg.topic || "andor-grid";
-                msg.andor = {
-                    gridSize: node.gridSize,
-                    original: msg.payload
-                };
                 send(msg);
-                if (done) done();
+                done && done();
             } catch (err) {
-                node.error("error in andor-grid: " + err, msg);
-                if (done) done(err);
+                done && done(err);
             }
         });
     }

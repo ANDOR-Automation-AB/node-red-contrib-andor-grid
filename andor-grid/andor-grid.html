@@ -4,28 +4,38 @@
         color: '#a6bbcf',
         defaults: {
             name: {value:"grid"},
-            gridSize: {value: 10, required: true}
+            group: { value: "", type: "ui-group", required: true },
+            order: { value: 0 },
+            width: { value: 0 },
+            height:{ value: 0 }
         },
         inputs: 1,
         outputs: 1,
         icon: "font-awesome/fa-th",
-        label: function() {
-            return this.name || "grid";
-        }
+        label: function() { return this.name || "grid"; }
     });
 </script>
 
 <script type="text/html" data-template-name="andor-grid">
     <div class="form-row">
+        <label for="node-input-group"><i class="fa fa-object-group"></i> Group</label>
+        <input type="text" id="node-input-group">
+    </div>
+    <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Namn</label>
         <input type="text" id="node-input-name" placeholder="Namn">
     </div>
     <div class="form-row">
-        <label for="node-input-gridSize"><i class="fa fa-th"></i> Gridstorlek</label>
-        <input type="number" id="node-input-gridSize" value="10">
+        <label for="node-input-order"><i class="fa fa-list-ol"></i> Order</label>
+        <input type="number" id="node-input-order">
+    </div>
+    <div class="form-row">
+        <label><i class="fa fa-arrows"></i> Size</label>
+        <input type="number" id="node-input-width"  style="width: 70px;">
+        <input type="number" id="node-input-height" style="width: 70px;">
     </div>
 </script>
 
 <script type="text/html" data-help-name="andor-grid">
-    <p>This node sends data to the andor grid widget in Dashboard 2.</p>
+    <p>Testar att skriva 'hello node-red' i en vald dashboard grupp</p>
 </script>

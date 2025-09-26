@@ -1,23 +1,12 @@
 <template>
-  <div class="andor-grid-widget">
-    <h3>Andor Grid</h3>
-    <pre>{{ value }}</pre>
+  <div>
+    <h3>hello node-red</h3>
   </div>
 </template>
 
 <script>
 export default {
   name: "AndorGrid",
-  props: {
-    value: { type: [String, Number, Array, Object], default: "" }
-  }
+  props: ['id','props','state']
 }
 </script>
-
-<style scoped>
-.andor-grid-widget {
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-</style>

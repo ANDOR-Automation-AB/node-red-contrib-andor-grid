@@ -7,10 +7,13 @@ export default defineConfig({
     lib: {
       entry: 'ui/andor-grid.js',
       name: 'AndorGrid',
-      fileName: 'andor-grid'
+      fileName: 'ui-andor-grid',
+      formats: ['umd']
     },
+    outDir: 'resources',
     rollupOptions: {
-      external: ['vue']
+      external: ['vue'],
+      output: { globals: { vue: 'Vue' } }
     }
   }
 })
