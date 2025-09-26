@@ -13,7 +13,6 @@
   ],
   "author": "ANDOR Automation AB",
   "license": "MIT",
-  "dependencies": {},
   "node-red": {
     "nodes": {
       "andor-grid": "andor-grid/andor-grid.js"
@@ -21,7 +20,16 @@
   },
   "node-red-dashboard": {
     "widgets": {
-      "andor-grid": "ui/andor-grid.js"
+      "andor-grid": "dist/andor-grid.js"
     }
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "vite": "^7.1.7",
+    "vue": "^3.5.22"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch"
   }
 }

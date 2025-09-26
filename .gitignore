@@ -1,2 +1,20 @@
-
+# npm
 .npmrc
+
+# modules
+node_modules/
+
+# build
+dist/
+build/
+
+# log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
