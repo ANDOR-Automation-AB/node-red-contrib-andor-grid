@@ -20,9 +20,7 @@
   },
   "node-red-dashboard-2": {
     "widgets": {
-      "andor-grid": {
-        "output": "ui-andor-grid.umd.js"
-      }
+      "andor-grid": { "output": "ui-andor-grid.umd.js" }
     }
   },
   "peerDependencies": {

@@ -7,7 +7,7 @@ export default defineConfig({
     lib: {
       entry: 'ui/andor-grid.js',
       name: 'AndorGrid',
-      fileName: 'ui-andor-grid',
+      fileName: () => 'ui-andor-grid.umd.js',
       formats: ['umd']
     },
     outDir: 'resources',

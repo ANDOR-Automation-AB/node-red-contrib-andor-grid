@@ -5,8 +5,7 @@
 </template>
 
 <script>
-export default {
-  name: "AndorGrid",
-  props: ['id','props','state']
-}
+  export default {
+    props: ['id','props','state']
+  }
 </script>
